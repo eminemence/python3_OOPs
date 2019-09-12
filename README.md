@@ -4,3 +4,9 @@ I am following the [Packt Pub's Professional:  Python 3 Object-Oriented Programm
 
 This is a notes taking repository which will have code and my understanding of the course. Kindly mail me if there an issue with copyright will try to remove it.
 
+## Intial Project Setup ##
+
+```
+source activate py36
+python -m venv .env
+```

@@ -185,6 +185,18 @@ db = DB()
     - if imported it is the module name.
 * We can also define classes inside function.
 
+
+## Data Access ##
+* Most of the OOP language have a concept of data abstraction. Some attribute and methods are not accessible from other object.
+    - These are either marked private or protected.
+* Python do not have such strict data abstraction, its abstraction is more based on convention than enforced.
+* We can start an attribute or a method with a `_`, by convention this should not accessed directly.
+    - We can access these variables directly from outside the class.
+* We can also start an attribute or a method name with a `__`, this cannot be accessed from outside the object.
+    - we can still access it by using this `<object_name>._<class_name><__variablename>`
+    - There is no explicit data hiding.
+
+
 ## References ##
 1. [Python Modules and Packages - An Introduction ](https://realpython.com/python-modules-packages/)
 2. [Corey Schafer | Python OOP Tutorials - Working with Classes ](https://www.youtube.com/playlist?list=PL-osiE80TeTsqhIuOqKhwlXsIBIdSeYtc)

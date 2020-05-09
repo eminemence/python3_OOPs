@@ -119,6 +119,49 @@ class Point:
 * We can see the docstring of a class, method by using the `help()` in-built function.
 
 
+## Modules and packages ##
+* Each Python class is a module. This concept of module's helps in working with multiple class in a projects.
+* `import` is used to access the functionality of different python class. 
+* Consider we have these files and following classes in file.
+    - `database.py` has class **Database**, and **Query**.
+    - `products.py` is using the above classes.
+* There are 3 different way to import python modules.
+
+```python
+import database
+db = database.Database()
+```
+
+* The above code imports the database modules, and then use the dot notation for accessing class in the module.
+* Every time we have to use any class inside the database file, we have give the full dot notation.
+    - `<module>.<class>`
+
+
+```python
+from database import Database
+db = Database()
+```
+
+* We can use the above syntax to just import the Class directly.
+* The above syntax can cause issues if we have same class name like `Database` in the importing file.
+* We can also use the above syntax to import multiple classes.
+    - `from database import Database, Query`
+
+
+```python
+from database import Database as DB
+db = DB()
+```
+
+* To solve the issues mentioned in the above code snippet, we can import a class and provide it a name.
+* This should never be done.
+    - `from database import *`
+        + The above code is very inefficient.
+        + The above code bring each and every class, variable, function inside the present class without any indication from where it came.
+        + IDE gets confused while doing code completion based on the above.
+        + The `*` syntax will also bring some of the imported class also to the current name space.
+
+
 ## References ##
 1. [Python Modules and Packages - An Introduction ](https://realpython.com/python-modules-packages/)
 2. [Corey Schafer | Python OOP Tutorials - Working with Classes ](https://www.youtube.com/playlist?list=PL-osiE80TeTsqhIuOqKhwlXsIBIdSeYtc)

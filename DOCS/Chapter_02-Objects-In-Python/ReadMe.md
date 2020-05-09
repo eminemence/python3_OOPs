@@ -161,8 +161,32 @@ db = DB()
         + IDE gets confused while doing code completion based on the above.
         + The `*` syntax will also bring some of the imported class also to the current name space.
 
+### Packages ###
+* We can put multiple python files in a separate folder and call it a **package**.
+* The package name is the name of the folder.
+* presence of a special file called `__init__.py` creates a packages.
+* We can understand relative and absolute imports based on this folder structure.
+
+![Tree of the module](img/tree_module.png "Tree of the module")
+
+
+* Based on the above folder action, all the below code happen in `main.py`, and we run the `main.py`
+* We can import by using the absolute dot notation.
+    - `import ecommerce.products`
+* Within the modules, we can use relative imports.
+    - `from .database import Database` for importing database inside the modules.
+    - `.` : one dot to go back 1 folder.
+    - `..` : two dot to go back 2 folder.
+* When we import any module, and code not inside function are invoked immediately.
+    - This may cause delay in start-up of application.
+    - All the code in the python packages should be inside function.
+* We can use this code to separate if the code is executed manually of through imports.
+    - `if __name__ == "__main__":` when the module is invoke manually the name is `__main__`
+    - if imported it is the module name.
+* We can also define classes inside function.
 
 ## References ##
 1. [Python Modules and Packages - An Introduction ](https://realpython.com/python-modules-packages/)
 2. [Corey Schafer | Python OOP Tutorials - Working with Classes ](https://www.youtube.com/playlist?list=PL-osiE80TeTsqhIuOqKhwlXsIBIdSeYtc)
 3. [SentDex | Intermediate Python Programming ](https://www.youtube.com/playlist?list=PLQVvvaa0QuDfju7ADVp5W1GF9jVhjbX-_)
+4. [ImportError: attempted relative import with no known parent package](https://napuzba.com/a/import-error-relative-no-parent)

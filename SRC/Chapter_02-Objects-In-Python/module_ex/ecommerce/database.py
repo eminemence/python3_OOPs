@@ -1,3 +1,6 @@
+db = "hello"
+
+
 class Database(object):
     print("DataBase")
 

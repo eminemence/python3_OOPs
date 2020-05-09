@@ -110,6 +110,15 @@ class Point:
     - it accepts only 1 argument, the class which is being created,
     -  and returns the newly created object.
 
+### DocString ###
+* Documentation is a the most important function of a programmer's life.
+* Python supports through `docstrings`. There are 3 ways to document the code using `docstring`
+    - `' '` : single quotes, for single line docstring having which finishes in 1 line, can have `""` in the string.
+    - `" "` : double quotes, for single line docstring having `''` as part of the string.
+    - `""" """` : triple quotes, this is used for multi line doc string.
+* We can see the docstring of a class, method by using the `help()` in-built function.
+
+
 ## References ##
 1. [Python Modules and Packages - An Introduction ](https://realpython.com/python-modules-packages/)
 2. [Corey Schafer | Python OOP Tutorials - Working with Classes ](https://www.youtube.com/playlist?list=PL-osiE80TeTsqhIuOqKhwlXsIBIdSeYtc)

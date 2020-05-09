@@ -38,8 +38,8 @@ class Menu(object):
                 print("{0} is not a valid choice".format(choice))
 
     def show_notes(self, notes=None):
-        # if not notes:
-        #     notes = self.notebook.notes
+        if not notes:
+            notes = self.notebook.notes
         if not notes:
             print("\nNoteBook is empty please enter again.\n")
         else:
@@ -61,7 +61,8 @@ class Menu(object):
         memo = input("Enter a memo: ")
         tags = input("Enter tags: ")
         if memo:
-            self.notebook.modify_memo(id, memo)
+            if not (self.notebook.modify_memo(id, memo)):
+                print("Modification Failed")
         if tags:
             self.notebook.modify_tags(id, tags)
 

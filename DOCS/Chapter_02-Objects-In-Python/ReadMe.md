@@ -84,7 +84,31 @@ point2.move(5, 0)
 * Calling the above `move` function is very similar `point2.move(5, 0)`, `self` is not passed explicitly
 
 ### Object Initialization ###
+* If we access an attribute of a class before it is initialized we get a `AttributeError`.
+* Python also a concept of `constructor` and an `initializer`, in-place of just a `constructor`.
+* The Python `initializer` is called `__init__`, the `__` before and after the name signifies this is a special function used by Python interpreter.
+* We should never name our methods with `__`, which is called dunder.
 
+
+```python
+
+class Point:
+    # passing default aguments to we never have empty point attributes.
+    def __init__(self, x = 0, y = 0):
+        self.move(x, y)
+
+    # Move method
+    def move(self, x, y):
+        self.x = x
+        self.y = y
+```
+
+* The above code initialize all the attributes of class `point`. 
+* We can also pass default argument to the `__init__` function, making sure that the object always have initialized attributes.
+    - `x = 0, y = 0`, passed as argument above is a default value, if no value is passed with initializing the object.
+* The constructor is called `__new__`, and not `__init__`,  
+    - it accepts only 1 argument, the class which is being created,
+    -  and returns the newly created object.
 
 ## References ##
 1. [Python Modules and Packages - An Introduction ](https://realpython.com/python-modules-packages/)

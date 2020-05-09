@@ -38,12 +38,13 @@ class Menu(object):
                 print("{0} is not a valid choice".format(choice))
 
     def show_notes(self, notes=None):
-        if not notes:
-            notes = self.notebook.notes
+        # if not notes:
+        #     notes = self.notebook.notes
         if not notes:
             print("\nNoteBook is empty please enter again.\n")
-        for note in notes:
-            print("{0}: {1}\n{2}".format(note.id, note.tags, note.memo))
+        else:
+            for note in notes:
+                print("{0}: {1}\n{2}".format(note.id, note.tags, note.memo))
 
     def search_notes(self):
         filter = input("Search for: ")

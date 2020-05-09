@@ -2,7 +2,8 @@ import math
 
 
 class Point:
-    def __init__(self, x, y):
+    # passing default aguments to we never have empty point attributes.
+    def __init__(self, x=0, y=0):
         self.move(x, y)
 
     # Move method

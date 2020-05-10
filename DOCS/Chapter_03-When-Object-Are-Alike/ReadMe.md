@@ -58,3 +58,13 @@ class ContactList(list):
     - `dict`
     - `file`
     - `str`
+
+
+### Overriding and Super ###
+
+* We can add new behavior but also can change behavior to existing class. 
+* Changing behavior is called **override**, it is altering or replacing a method of the superclass with a new method.
+* We can extend the functionality in place of completely modifying the implementation by calling `super()` which invoke parent class methods.
+* `super()` can be called inside any method.
+* `super()` can be called at any point of the method and not at the beginning of the method.
+

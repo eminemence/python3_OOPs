@@ -38,3 +38,23 @@ class Supplier(contact.Contact):
 * The above code takes all code from `Contact` class described above and adds a `order` method.
 * `Supplier` inherits all the code from `Contact` and adds an additional method of `order`.
     - This `order` is not available on the `Contact` class.
+
+### Extending built-in ###
+
+```python
+class ContactList(list):
+    def search(self, name):
+        """Return all contacts that contain the search value in their name"""
+        matching_contact = []
+        for contact in self:
+            if name in contact.name:
+                matching_contact.append(contact)
+        return matching_contact
+```
+
+* Like `object` we can also extend other built-in objects like
+    - `list`
+    - `set`
+    - `dict`
+    - `file`
+    - `str`

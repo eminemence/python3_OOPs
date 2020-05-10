@@ -40,8 +40,6 @@ class FlacFile(object):
     def play(self):
         print("playing {} as flac".format(self.filename))
 
-def AudioList(list):
-    player = 
 
 if __name__ == "__main__":
     ogg = OggFile("myfile.ogg")

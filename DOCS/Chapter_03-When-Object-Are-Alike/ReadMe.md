@@ -91,11 +91,13 @@ class EmailableContact(contact.Contact, mailsender.MailSender):
 * One important thing to remember in multiple inheritance is that the class hierarchy is taken from right to left in the parameter list above.
 * The order does not matter most of the time, when the both base classes have different methods, but becomes and issues if the share method, the order changes based on inheritance.
 * The methods are resolved left to right.
-* As a best practice always keep the base class at the end of the paramater list.
+* As a best practice always keep the base class at the end of the parameter list.
+* In place of using explicit class name to call base class methods, it is useful to call `super()` instead. It help by not invoking the base class method twice.
 
 
 ## Reference ##
 * [What is a mixin, and why are they useful?](https://stackoverflow.com/questions/533631/what-is-a-mixin-and-why-are-they-useful)
 * [Mixins and Python](https://www.ianlewis.org/en/mixins-and-python)
+* [Supercharge Your Classes With Python super()](https://realpython.com/python-super/)
 
 

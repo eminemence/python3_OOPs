@@ -75,4 +75,27 @@ class Friend(contact.Contact):
         super().__init__(name, email)
         self.phone = phone
 ```
+## Multiple Inheritance ##
+* Multiple inheritance is very delicate subject in inheritance. It means a class inheriting from 2 or more classes.
+* Most of the time we do not need multiple inheritance, we should think multiple times before committing to a solution using multiple inheritance.
+* One common use of multiple inheritance in Python is the use of **Mixin**.
+    - A **Mixin** is used in when we want to provide lot of optional functionality to a single class.
+    - Or we want to use a single functionality in multiple classes.
+
+```python
+class EmailableContact(contact.Contact, mailsender.MailSender):
+    pass
+```
+
+* The above is an example of multiple inheritance.
+* One important thing to remember in multiple inheritance is that the class hierarchy is taken from right to left in the parameter list above.
+* The order does not matter most of the time, when the both base classes have different methods, but becomes and issues if the share method, the order changes based on inheritance.
+* The methods are resolved left to right.
+* As a best practice always keep the base class at the end of the paramater list.
+
+
+## Reference ##
+* [What is a mixin, and why are they useful?](https://stackoverflow.com/questions/533631/what-is-a-mixin-and-why-are-they-useful)
+* [Mixins and Python](https://www.ianlewis.org/en/mixins-and-python)
+
 

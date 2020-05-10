@@ -68,3 +68,11 @@ class ContactList(list):
 * `super()` can be called inside any method.
 * `super()` can be called at any point of the method and not at the beginning of the method.
 
+```python
+class Friend(contact.Contact):
+    def __init__(self, name, email, phone):
+        # Corrected by calling super init.
+        super().__init__(name, email)
+        self.phone = phone
+```
+

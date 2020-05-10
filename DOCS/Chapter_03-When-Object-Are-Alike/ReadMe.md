@@ -94,10 +94,20 @@ class EmailableContact(contact.Contact, mailsender.MailSender):
 * As a best practice always keep the base class at the end of the parameter list.
 * In place of using explicit class name to call base class methods, it is useful to call `super()` instead. It help by not invoking the base class method twice.
 
+### Argument Passing ###
+
+* When we have to pass different set of arguments to both parent class, then it becomes difficult.
+* We can use the existing way of using explicit Class name, to call `__init__`, but same cannot be used with `super` as we will not know which base class will be called.
+* We have to used Key Word argument as a parameter and also providing an empty value to the key word argument.
+* The Key word explicitly mentioned in the function consumes those argument and passes the remaining to hierarchy as `**kwargs`
+* This causes issue is multiple class in the hierarchy want to use the same arguments, then we have to keep the `**kwargs` update with all values, and each class uses only relevant values.  
+
+
 
 ## Reference ##
 * [What is a mixin, and why are they useful?](https://stackoverflow.com/questions/533631/what-is-a-mixin-and-why-are-they-useful)
 * [Mixins and Python](https://www.ianlewis.org/en/mixins-and-python)
 * [Supercharge Your Classes With Python super()](https://realpython.com/python-super/)
+* [ Python’s super() considered super! ](https://rhettinger.wordpress.com/2011/05/26/super-considered-super/)
 
 

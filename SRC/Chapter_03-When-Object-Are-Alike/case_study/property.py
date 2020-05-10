@@ -36,6 +36,8 @@ class Apartment(Property):
         print("laundary: %s " % self.laundary)
         print("has balcony: %s" % self.balcony)
 
+    @staticmethod
+    def prompt_init():
         parent_init = Property.prompt_print()
         laundary = ""
         while laundary.lower() not in Apartment.valid_laundries:
@@ -54,5 +56,3 @@ class Apartment(Property):
             )
         parent_init.update({"laundary": laundary, "balcony": balcony})
         return parent_init
-
-    prompt_init = staticmethod(prompt_init)

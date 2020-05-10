@@ -2,9 +2,9 @@ import contact
 
 
 # The below class extends Contact class,
-# but there is duplicate code, which we correct in next version.
+# and corrects the problem
 class Friend(contact.Contact):
     def __init__(self, name, email, phone):
-        self.name = name
-        self.email = email
+        # Corrected by calling super init.
+        super().__init__(name, email)
         self.phone = phone

@@ -10,6 +10,7 @@ This is a notes taking repository which will have code and my understanding of t
 
 1. [Chapter 01 | Object Oriented Design](DOCS/Chapter_01-Object-Oriented-Design/ReadMe.md)
 2. [Chapter 02 | Objects In Python](DOCS/Chapter_02-Objects-In-Python/ReadMe.md)
+3. [Chapter 03 | When Objects are Alike](DOCS/Chapter_03-When-Object-Are-Alike/ReadMe.md)
 
 ## Intial Project Setup ##
 

@@ -131,6 +131,43 @@ except ValueError as e:
     - `else`
     - `finally`
 
+## Exception Hierarchy ##
+* Here is an hierarchy of exception in Python.
+    - `BaseException`
+        + `SystemExit`
+            * This is raised when we call `sys.exit` in our code, it signifies natural exits.
+            * Catching this exception will stop the exit process, so after cleanup we should re-raise the exception again.
+            * The reason we do not want to catch this exception accidentally, that is the reason it inherits from `BaseException` 
+        + `KeyboardInterrupt`
+            * This is common in command line programs.
+            * `Ctrl + C` is a common way to exit such application.
+        + `Exception`
+            * All other exception is derived from here.
+* When we use a `except` clause without any exception mentioned, it catches all the exception including `BaseException`.
+* Mostly in code if generic exception has to be caught, it has to be the `Exception` class.
+
+### Own Exception ###
+* We can create our own exception, by inheriting from `Exception` class.
+
+```python
+class InvalidWithdrawal(Exception):
+    def __init__(self, balance, amount):
+        super().__init__("account doesn't have ${}".format(amount))
+        self.amount = amount
+        self.balance = balance
+
+    def overage(self):
+        return self.amount - self.balance
+```
+
+* We can raise the above exception using the `raise`
+
+### If statement Vs Exception ###
+* We can check for inputs value in a function and check or print respective error string.
+* We should need `Exception` at all, but few thing works in favor of exception, which is we cannot check for all type of inputs.
+* We can also use `Exception` as a effective way of handling control flow.
+    - In case of an inventory system, if a item is out of stock, which is very much of a possibility we can catch an `OutOfStockError` and respond accordingly.
+
 
 ## Reference ##
 * [Python try-else](https://stackoverflow.com/questions/855759/python-try-else)

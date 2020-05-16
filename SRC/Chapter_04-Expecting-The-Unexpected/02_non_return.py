@@ -14,4 +14,9 @@ def call_exceptor():
 
 if __name__ == "__main__":
     # no_return()
-    call_exceptor()
+    # call_exceptor()
+    try:
+        no_return()
+    except:
+        print("I caought and exception")
+    print("executed after the exception")

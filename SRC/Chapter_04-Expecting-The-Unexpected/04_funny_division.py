@@ -1,10 +1,10 @@
-    def funny_division(anumber):
-        try:
-            if anumber == 13:
-                raise ValueError("13 is an unlucky number")
-            return 100 / anumber
-        except (ZeroDivisionError, TypeError):
-            return "Enter a number other than zero"
+def funny_division(anumber):
+    try:
+        if anumber == 13:
+            raise ValueError("13 is an unlucky")
+        return 100 / anumber
+    except (ZeroDivisionError, TypeError):
+        return "Enter a number other than zero"
 
 
 if __name__ == "__main__":

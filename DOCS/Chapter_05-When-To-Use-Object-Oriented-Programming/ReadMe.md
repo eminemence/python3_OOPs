@@ -48,3 +48,35 @@ if __name__ == "__main__":
     - `_get_name()` is called when we are doing `print(c.name)`
     - `_set_name()` is called when we are doing `c.name = "red"`
 * The `property` keywords is used to make methods look like class attribute.
+* The `property` function can be considered as a proxies any request to set or access the attributes value.
+* The `property` takes in total of 4 parameters, but generally only 2 are provided, which acts as a getter and setter.
+    - 1st parameter: The getter function
+    - 2nd parameter: The setter function
+    - 3rd parameter: The delete function
+    - 4th parameter: The doc string of the function, generally only supposed in the getter function, which is the copied.
+
+```python
+class Silly(object):
+    def _get_silly(self):
+        print("You are getting silly")
+        return self._silly
+
+    def _set_silly(self, value):
+        print("You are making silly {}".format(value))
+        self._silly = value
+
+    def _del_silly(self):
+        print("Whoah, you killed silly")
+        del self._silly
+
+    silly = property(_get_silly, _set_silly, _del_silly, """This is a silly property""")
+
+
+if __name__ == "__main__":
+    s = Silly()
+    s.silly = "funny"
+    print(s.silly)
+    del s.silly
+```
+
+* In the above code, we are using all the 4 parameters.

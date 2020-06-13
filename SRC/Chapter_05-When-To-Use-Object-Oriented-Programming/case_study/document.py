@@ -5,6 +5,8 @@ class Document(object):
         self.filename = ""
 
     def insert(self, character):
+        if not hasattr(character, "character"):
+            character = Character(character)
         self.characters.insert(self.cursor.position, character)
         self.cursor.forward()
 
@@ -18,7 +20,7 @@ class Document(object):
 
     @property
     def string(self):
-        return "".join(self.characters)
+        return "".join((str(c) for c in self.characters))
 
 
 class Cursor(object):
@@ -33,7 +35,7 @@ class Cursor(object):
         self.position -= 1
 
     def home(self):
-        while self.document.characters[self.position - 1] != "\n":
+        while self.document.characters[self.position - 1].character != "\n":
             self.position -= 1
             if self.position == 0:
                 break
@@ -41,9 +43,24 @@ class Cursor(object):
     def end(self):
         while (
             self.position < len(self.document.characters)
-            and self.document.characters[self.position] != "\n"
+            and self.document.characters[self.position].character != "\n"
         ):
             self.position += 1
+
+
+class Character(object):
+    def __init__(self, character, bold=False, italic=False, underline=False):
+        assert len(character) == 1
+        self.character = character
+        self.bold = bold
+        self.italic = italic
+        self.underline = underline
+
+    def __str__(self):
+        bold = "*" if self.bold else ""
+        italic = "/" if self.italic else ""
+        underline = "_" if self.underline else ""
+        return bold + italic + underline + self.character
 
 
 if __name__ == "__main__":
@@ -51,17 +68,13 @@ if __name__ == "__main__":
     doc.filename = "test_doc"
     doc.insert("h")
     doc.insert("e")
-    doc.insert("l")
-    doc.insert("l")
+    doc.insert(Character("l", bold=True))
+    doc.insert(Character("l", bold=True))
     doc.insert("o")
     doc.insert("\n")
-    doc.insert("w")
-    doc.insert("o")
-    doc.insert("r")
+    doc.insert(Character("w", italic=True))
+    doc.insert(Character("o", italic=True))
+    doc.insert(Character("r", underline=True))
     doc.insert("l")
     doc.insert("d")
-    print("".join(doc.characters))
     print(doc.string)
-    doc.cursor.home()
-    doc.insert("*")
-    print("".join(doc.characters))

@@ -129,3 +129,8 @@ if __name__ == "__main__":
     - **Extensibility** : If a subclass wanted to modify the actual manager to do something, it can easily done by over-rinding individual methods.
     - **Partitioning** : A external class could create instance of this class and call the appropriate method.
 
+### Inheritance and Composition ###
+* Lot of arguments can be given to use either mode of creating objects.
+* Using Inheritance we should always have to satisfy the `is-a` relationship.
+* Using composition we should always satisfy the `has-a` relationship.
+    - Composition also helps in implementing the separation of concerns.

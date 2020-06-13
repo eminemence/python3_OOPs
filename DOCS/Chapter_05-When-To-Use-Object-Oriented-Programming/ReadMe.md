@@ -121,3 +121,11 @@ if __name__ == "__main__":
     - Methods are generally verbs.
     - Standard attributes should be used always until we feel the need to control access.
 
+
+## Managing Objects ##
+* There are manager objects which tie all the object together and do the actual work.
+* The main advantages for a manager objects are, 
+    - **Readability** : The code for each steps is in a self-contained unit that is easy to read and understand.
+    - **Extensibility** : If a subclass wanted to modify the actual manager to do something, it can easily done by over-rinding individual methods.
+    - **Partitioning** : A external class could create instance of this class and call the appropriate method.
+

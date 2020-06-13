@@ -81,7 +81,7 @@ if __name__ == "__main__":
 
 * In the above code, we are using all the 4 parameters.
 
-## Decorators ##
+### Decorators ###
 * Decorators can be used to modify functions dynamically, by passing them as arguments to other functions, which eventually return a new function.
 * Specifying a decorator is as simple as `@property`, applies the `property`decorator, which is same as calling.
     - `silly = property(silly)`
@@ -114,3 +114,10 @@ if __name__ == "__main__":
 ```
 
 * This code is same as above, with the only difference being the use of decorators.
+
+### Use of Property ###
+* `property` keywords is blurring the lines between behavior and data.
+* In Python, it becomes even more difficult as, data, properties, and methods are all attributes of class.
+    - Methods are generally verbs.
+    - Standard attributes should be used always until we feel the need to control access.
+

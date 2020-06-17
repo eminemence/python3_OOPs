@@ -141,3 +141,4 @@ dmypy.json
 # Sublime Code
 *.sublime-*
 DOCS/Chapter_02-Objects-In-Python/.DS_Store
+.DS_Store*

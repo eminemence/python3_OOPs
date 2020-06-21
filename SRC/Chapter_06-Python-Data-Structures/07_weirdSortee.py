@@ -23,3 +23,9 @@ if __name__ == "__main__":
     print(l)
     l.sort()
     print(l)
+    for i in l:
+        i.sort_num = False
+
+    print(l)
+    l.sort()
+    print(l)

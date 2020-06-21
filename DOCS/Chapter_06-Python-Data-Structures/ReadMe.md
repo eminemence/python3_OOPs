@@ -134,3 +134,29 @@ for k, v in stocks.items():
 * List is used when mostly order is important.
 * List can be used to create queues, stacks, linked lists etc.
 * List should not be used to create attribute of the same object.
+* List sorting is an interesting topics, where it can do a number of things.
+    - To Sort a class of object in a list, we can implement the `__lt__` method in the class, to tell the sorting order.
+    - As shown below, `__lt__`, changes the sort order based on the value of `sort_num`
+
+```python
+class WierdSortee(object):
+    def __init__(self, string, number, sort_num):
+        self.string = string
+        self.number = number
+        self.sort_num = sort_num
+
+    def __lt__(self, object):
+        if self.sort_num:
+            return self.number < object.number
+        return self.string < object.string
+
+    def __repr__(self):
+        return "{}:{}".format(self.string, self.number)
+```
+
+* We can also pass a `key=` to the sorting function, identifying which is the key for sorting.
+    - `x = [(1, "c"), (2, "a"), (3, "b")]`
+    - `x.sort(key=lambda i: i[1])`
+        + For the above list of tuple, we defined a `key=` to a `lamda` function, which passed the 2nd element of the tuple as a key.
+    - `l.sort(key=str.lower)`
+        + We can also pass built-in `str.lower` as a key, thus sorting by ignoring the case.

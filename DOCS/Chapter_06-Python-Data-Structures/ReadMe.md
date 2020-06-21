@@ -160,3 +160,24 @@ class WierdSortee(object):
         + For the above list of tuple, we defined a `key=` to a `lamda` function, which passed the 2nd element of the tuple as a key.
     - `l.sort(key=str.lower)`
         + We can also pass built-in `str.lower` as a key, thus sorting by ignoring the case.
+
+
+## Sets ##
+* Sets are used when the uniqueness of the objects are important.
+* Sets store only one copy of the objects.
+* Empty sets is created with `sets()` constructor.
+* Sets are also not ordered like Dictionaries.
+* Sets are useful for these operations
+    - Finding if a element is in the sets.
+    - Looping over item in sets.
+* Sets are not useful, to provide order to its elements, like sorting etc.
+* The most important methods on Sets are
+    - `union() ` : It combines 2 sets, which have all the elements from both sets.
+    - `intersection() ` : it finds the common element in two sets.
+    - `symmetric_difference()` : it finds the element which are in one set of the other but not in both.
+    - `issubset()` : if a set is a subset of another set.
+    - `issuperset()` : if a set is a superset of another set.
+    - `difference()` : elements present in the calling set but not in the parameter sets.
+
+
+

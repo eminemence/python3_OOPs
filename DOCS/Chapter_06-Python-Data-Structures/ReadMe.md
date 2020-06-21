@@ -129,3 +129,8 @@ for k, v in stocks.items():
     - Each key represent an attribute of object and its value.
 
 
+## List ##
+* List are the least object oriented Python data structure.
+* List is used when mostly order is important.
+* List can be used to create queues, stacks, linked lists etc.
+* List should not be used to create attribute of the same object.

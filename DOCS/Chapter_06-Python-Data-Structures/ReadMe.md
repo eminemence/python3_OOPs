@@ -180,4 +180,25 @@ class WierdSortee(object):
     - `difference()` : elements present in the calling set but not in the parameter sets.
 
 
+## Extending Built-in ##
+* There are two ways we can use the above storage data structure in our code.
+    - Use Inheritance to extend the functionality.
+        + We should use Inheritance when we want to modify the way the Data Structure interacts.
+    - Use composition to store certain data.
+        + We can use composition, when we have to use it just as a storage.
+* To all the non object oriented syntax of python, there is an underlying Object Oriented syntax.
+    - The Non Object oriented syntax is taken just so that the writing code is more logical.
+
+```python
+c = a + b
+c = a.add(b) # Non Object oriented way
+```
+
+* The above syntax is possible by overriding a lot of hidden methods.
+    - `__add__()` : should be overridden for `+`
+    - `__contains()` : should be overridden for `in` operator.
+    - `__setitem__()` : should be overridden for `=` operator.
+    - `__getitem_()` : should be overridden for getting value from operator.
+  
+
 

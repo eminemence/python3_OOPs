@@ -52,7 +52,7 @@ if __name__ == "__main__":
 * The `property` takes in total of 4 parameters, but generally only 2 are provided, which acts as a getter and setter.
     - 1st parameter: The getter function
     - 2nd parameter: The setter function
-    - 3rd parameter: The delete function
+    - 3rd parameter: The delete function. If no delete function exists for the property then an attempt to delete it will raise exception.
     - 4th parameter: The doc string of the function, generally only supposed in the getter function, which is the copied.
 
 ```python
@@ -78,8 +78,21 @@ if __name__ == "__main__":
     print(s.silly)
     del s.silly
 ```
-
 * In the above code, we are using all the 4 parameters.
+
+
+```
+class DemoGetOnly:
+    @property
+    def get_only(self):
+        return "getter_func
+if __name__ == "__main__":
+    p = DemoGetOnly()
+    # Trying to set when no setter function is specified leads to AttributeError
+    # p.get_only = "setter_func"
+    print(p.get_only)
+```
+
 
 ### Decorators ###
 * Decorators can be used to modify functions dynamically, by passing them as arguments to other functions, which eventually return a new function.

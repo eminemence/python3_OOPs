@@ -127,6 +127,12 @@ print(mid_value, date)
           print("cities sorted by avg_temp : ",sorted([dd1,dd2,dd3]))
 
       ```
+      Output of above code looks like this
+      ```python
+      dd1 == dd2 ->  False
+      Objects are :  DCDemo3(city='Blore', avg_temp=25) DCDemo3(city='Pune', avg_temp=30) DCDemo3(city='Dehradun', avg_temp=15)
+      cities sorted by avg_temp :  [DCDemo3(city='Dehradun', avg_temp=15), DCDemo3(city='Blore', avg_temp=25), DCDemo3(city='Pune', avg_temp=30)]
+      ```
       `sort_index` can be used to mention the method to calculate the sort index of the objects.
  
 ## Dictionaries ##

@@ -83,8 +83,51 @@ print(mid_value, date)
 * Since `namedtuple` is a tuple, we cannot modify the individual values of the tuple.
 
 ### Dataclasses ###
-* For creating objects where data can be changed, used `dataclass`.
-  **TODO : Add more dataclass details and samples**
+* For creating objects where data can be changed, use `dataclass`.
+* There are two ways of creating a dataclass object
+    + Using `make_dataclass` method. `make_dataclass` method takes two arguments, first name of the class, second the list of arguments
+      ```python
+      from dataclasses import make_dataclass
+
+      def data_class_demo2():
+          """This function shows how to create dataclasses using make_dataclass function"""
+          # first arg is the name of the class, second arg is the list of properties
+          DCDemo2 = make_dataclass("DCDemo2",["city","avg_temp"])
+          dd1 = DCDemo2("Blore",25)
+          dd2 = DCDemo2("Pune",30)
+          dd3 = DCDemo2("Dehradun",15)
+    
+          print(dd1,dd2,dd3)
+      ```
+      The equality method is provided by default
+      
+    + Using `@dataclass` decorator. It provides a way to order the objects based on the attribute values.
+      ```python
+      @dataclass(order=True)
+      class DCDemo3:
+          sort_index:int = field(init=False, repr = False)
+          # type hint are allowed here
+          city:str
+          avg_temp:float = 0.0
+    
+      def __post_init__(self):
+          self.sort_index = self.avg_temp
+
+      def data_class_demo3():
+          """This function shows how to create dataclasses ordered"""
+          dd1 = DCDemo3("Blore",25)
+          dd2 = DCDemo3("Pune",30)
+          dd3 = DCDemo3("Dehradun",15)
+          # there is inbuilt comparison operator
+          print("dd1 == dd2 -> ",dd1 == dd2)
+
+          print("Objects are : ",dd1,dd2,dd3)
+          # dataclass has inbuilt equality comparision
+          # The inbuilt comparision operator does sorting in the order of declared attributes
+          print("cities sorted by avg_temp : ",sorted([dd1,dd2,dd3]))
+
+      ```
+      `sort_index` can be used to mention the method to calculate the sort index of the objects.
  
 ## Dictionaries ##
 * Dictionaries map object directly to other objects.

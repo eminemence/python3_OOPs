@@ -72,7 +72,7 @@ print(mid_value, date)
 
 * As discussed in tuples above, the biggest disadvantage of tuple is that individual element cannot be named.
 * We can used Named Tuple to group data with no extra behavior.
-* `Stock = namedtuple("Stock", "symbol current high low")`
+* `Stock = namedtuple("Stock", ["symbol","current","high","low"])`
     - `namedtuple` constructor takes two arguments.
         + The identifier the tuple can have
         + String separated space attributes
@@ -80,7 +80,10 @@ print(mid_value, date)
 * `namedtuple` are perfect for data only representation.
 * Since `namedtuple` is a tuple, we cannot modify the individual values of the tuple.
 
-
+### Dataclasses ###
+* For creating objects where data can be changed, used `dataclass`.
+  **TODO : Add more dataclass details and samples**
+ 
 ## Dictionaries ##
 * Dictionaries map object directly to other objects.
 * Dictionaries are best used for fast lookup, i.e. searching for value.

@@ -5,12 +5,14 @@
 ```python
 obj = object()
 print(obj)
-obj.x = 9
+# Following line raises AttributeError, so cannot set any attribute on object class
+# obj.x = 9
 ```
 
 * In the above code, we can create an empty object by just calling the `object()` constructor / initiator .
 * Creating object in the above manner stop's from adding new attribute to the class, it raise `AttributeError`.
 * The reason for not allowing to create the attributes is memory, as everything inherits from  `objects`, even keeping minor memory allocated will be big.
+* Python disables arbitrary properties on object and other built-ins.
 
 ```python
 class MyObject:
@@ -23,7 +25,7 @@ print(m.x)
 
 * We should create our own class and assign attributes if we want to do that, in place of creating empty `object`.
 * Built-in data structures are available in Python to support data storage, and we should not use objects for this purpose.
-
+**Tip : Save memory & limit arbitrary properties on class you define by using __slots__. More info : https://book.pythontips.com/en/latest/__slots__magic.html **
 
 ## Tuples and Named Tuples. ##
 

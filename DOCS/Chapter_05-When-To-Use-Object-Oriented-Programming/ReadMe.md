@@ -1,5 +1,7 @@
 # Chapter 05 | When To Use Object Oriented Programming #
 
+*_Code verified for Python 3.7_*
+
 ## Identifying Object ##
 
 * Identifying objects in a problem statement is the most crucial part of the learning experience.

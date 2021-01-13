@@ -25,7 +25,7 @@ print(m.x)
 
 * We should create our own class and assign attributes if we want to do that, in place of creating empty `object`.
 * Built-in data structures are available in Python to support data storage, and we should not use objects for this purpose.
-_Tip : Save memory & limit arbitrary properties on class you define by using __slots__. More info : https://book.pythontips.com/en/latest/__slots__magic.html_
+* _Tip : Save memory & limit arbitrary properties on class you define by using __slots__. More info : https://book.pythontips.com/en/latest/__slots__magic.html_
 
 ## Tuples and Named Tuples. ##
 
@@ -60,6 +60,11 @@ print(mid_value, date)
         + We can pack the variable and move it around, like passing into function etc, and when individual values are required we can unpack them.
         + We can use the index to access the individual elements of tuple.
         + We can also use slice to get a group of values, which is a tuple and not a list.
+            * ```python
+              stock = "FB", 100, 20, 500
+              volume = stock[3]
+              print(volume)
+              ```
 * The side effect of the tuple is that, there is no name to understand the values while passing around.
 * Tuples should be used when the group of values make sense.
 

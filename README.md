@@ -11,6 +11,10 @@ This is a notes taking repository which will have code and my understanding of t
 1. [Chapter 01 | Object Oriented Design](DOCS/Chapter_01-Object-Oriented-Design/ReadMe.md)
 2. [Chapter 02 | Objects In Python](DOCS/Chapter_02-Objects-In-Python/ReadMe.md)
 3. [Chapter 03 | When Objects are Alike](DOCS/Chapter_03-When-Object-Are-Alike/ReadMe.md)
+4. [Chapter 04 | Expecting The Unexpected](DOCS/Chapter_04-Expecting-The-Unexpected/ReadMe.md)
+5. [Chapter 05 | When To Use Object Oriented Programming](DOCS/Chapter_05-When-To-Use-Object-Oriented-Programming/ReadMe.md)
+6. [Chapter 06 | Python Data Structures](DOCS/Chapter_06-Python-Data-Structures/ReadMe.md)
+7. [Chapter 07 | Python Object Oriented Shortcuts](DOCS/Chapter_07-Python-Object-Oriented-Shortcuts/ReadMe.md)
 
 ## Intial Project Setup ##
 

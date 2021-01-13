@@ -17,7 +17,7 @@
 * In Python, there is no restriction on accessing the data member, unlike Java.
 * Though we can indicate a private member of a class by adding `_` in the name like `_name`.
     - This does not prevent it from accessing the member, just that it is a convention.
-* Python uses a `property()` keyword which can provide getter and setter on a member.
+* Python uses a `property(<getter_function>, <setter_function>)` keyword which can provide getter and setter on a member.
 
 ```python
 class Color(object):

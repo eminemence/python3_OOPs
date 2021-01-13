@@ -137,7 +137,7 @@ if __name__ == "__main__":
     - Standard attributes should be used always until we feel the need to control access.
 
 
-## Managing Objects ##
+## Manager Objects ##
 * There are manager objects which tie all the object together and do the actual work.
 * The main advantages for a manager objects are, 
     - **Readability** : The code for each steps is in a self-contained unit that is easy to read and understand.

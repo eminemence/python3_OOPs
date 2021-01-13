@@ -1,5 +1,8 @@
 # Chapter 06 | Python Data Structure #
 
+# Code verified for Python 3.7 #
+================================
+
 ## Empty Object ##
 
 ```python

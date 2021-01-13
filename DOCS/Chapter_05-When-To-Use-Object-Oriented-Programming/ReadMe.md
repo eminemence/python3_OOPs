@@ -81,7 +81,7 @@ if __name__ == "__main__":
 * In the above code, we are using all the 4 parameters.
 
 
-```
+```python
 class DemoGetOnly:
     @property
     def get_only(self):

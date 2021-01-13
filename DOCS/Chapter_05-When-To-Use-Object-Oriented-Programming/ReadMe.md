@@ -81,19 +81,6 @@ if __name__ == "__main__":
 * In the above code, we are using all the 4 parameters.
 
 
-```python
-class DemoGetOnly:
-    @property
-    def get_only(self):
-        return "getter_func
-if __name__ == "__main__":
-    p = DemoGetOnly()
-    # Trying to set when no setter function is specified leads to AttributeError
-    # p.get_only = "setter_func"
-    print(p.get_only)
-```
-
-
 ### Decorators ###
 * Decorators can be used to modify functions dynamically, by passing them as arguments to other functions, which eventually return a new function.
 * Specifying a decorator is as simple as `@property`, applies the `property`decorator, which is same as calling.
@@ -127,6 +114,21 @@ if __name__ == "__main__":
 ```
 
 * This code is same as above, with the only difference being the use of decorators.
+
+
+```python
+class DemoGetOnly:
+    @property
+    def get_only(self):
+        return "getter_func
+if __name__ == "__main__":
+    p = DemoGetOnly()
+    # Trying to set when no setter function is specified leads to AttributeError
+    # p.get_only = "setter_func"
+    print(p.get_only)
+```
+
+
 
 ### Use of Property ###
 * `property` keywords is blurring the lines between behavior and data.

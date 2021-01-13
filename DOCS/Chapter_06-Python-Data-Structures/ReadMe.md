@@ -25,7 +25,7 @@ print(m.x)
 
 * We should create our own class and assign attributes if we want to do that, in place of creating empty `object`.
 * Built-in data structures are available in Python to support data storage, and we should not use objects for this purpose.
-**Tip : Save memory & limit arbitrary properties on class you define by using __slots__. More info : https://book.pythontips.com/en/latest/__slots__magic.html **
+** Tip : Save memory & limit arbitrary properties on class you define by using __slots__. More info : https://book.pythontips.com/en/latest/__slots__magic.html **
 
 ## Tuples and Named Tuples. ##
 

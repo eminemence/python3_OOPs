@@ -260,7 +260,7 @@ class WierdSortee(object):
 * Sets are useful for these operations
     - Finding if a element is in the sets.
     - Looping over item in sets.
-* Sets are not useful, to provide order to its elements, like sorting etc.
+* Sets are not useful, to provide order to its elements, like sorting etc. Convert `set` to a `list` if you want to sort items.
 * The most important methods on Sets are
     - `union() ` : It combines 2 sets, which have all the elements from both sets.
     - `intersection() ` : it finds the common element in two sets.

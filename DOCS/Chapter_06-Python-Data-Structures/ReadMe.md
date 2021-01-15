@@ -268,7 +268,9 @@ class WierdSortee(object):
     - `issubset()` : if a set is a subset of another set.
     - `issuperset()` : if a set is a superset of another set.
     - `difference()` : elements present in the calling set but not in the parameter sets.
-
+* `set` is more efficient than `list` when checking for membership.
+    - `list` does a value compare to figure out. Time complexity - `O(n)`
+    - `set` hashes the values and checks membership. Time complexity - `O(1)`
 
 ## Extending Built-in ##
 * There are two ways we can use the above storage data structure in our code.
@@ -289,6 +291,15 @@ c = a.add(b) # Non Object oriented way
     - `__contains()` : should be overridden for `in` operator.
     - `__setitem__()` : should be overridden for `=` operator.
     - `__getitem_()` : should be overridden for getting value from operator.
-  
+    
+* To figure out the built-in special methods use dir and help methods like this
+```python
+>>> dir(list)
+['__add__', '__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__iadd__', '__imul__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__rmul__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'append', 'clear', 'copy', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'sort']
 
+>>> help(list.__imul__)
+Help on wrapper_descriptor:
 
+__imul__(self, value, /)
+    Implement self*=value.
+```

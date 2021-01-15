@@ -134,6 +134,8 @@ print(mid_value, date)
       cities sorted by avg_temp :  [DCDemo3(city='Dehradun', avg_temp=15), DCDemo3(city='Blore', avg_temp=25), DCDemo3(city='Pune', avg_temp=30)]
       ```
       `sort_index` can be used to mention the method to calculate the sort index of the objects.
+      
+      Dataclasses are not iterable, you can't loop or unpacke their values
  
 ## Dictionaries ##
 * Dictionaries map object directly to other objects.
@@ -168,6 +170,12 @@ print(stocks.setdefault("RIM", (67.38, 68.48, 67.28)))
 * It becomes difficult for setting all the key with default values using `setdefault`.
     - We can use `defaultdict()` to initialize a dictionary values, it takes an argument, which initializes accordingly.
     - We also pass our own object to `defaultdict`
+    
+```python
+dct2 = defaultdict(lambda : "Not Found")
+print(dct2["3"]) # -> this prints "Not Found"
+```
+
 
 ```python
 for k, v in stocks.items():
@@ -184,11 +192,32 @@ for k, v in stocks.items():
 * We can store all different type of objects as key in dictionaries, like integer, floats, another objects, string, even tuple
     - We cannot store `list` or `dict` as a key,
         + these are not hash ables as these can change on runtime or are mutable.
+        + as list items can be added/deleted causing the hash to change, hence the lists cannot be used as keys.
 * We can use anything as a value, there is no restrictions.
 * Dictionaries can be used in 2 ways
     - As an indexing system
     - Each key represent an attribute of object and its value.
+    
+## Counters ##
+Inbuilt class to count the number of specific instances in an iterable.
+```python
+from collections import Counter
 
+def counter_demo():
+    lst1 = [1,2,3,4,5,6,1,2,4,1]
+    print("Most common no is ", Counter(lst1).most_common(3))
+    print("top count of occurances is ", Counter(lst1).most_common(3)[0][1])
+
+output:
+Most common no is  [(1, 3), (2, 2), (4, 2)]
+top count of occurances is  3
+```
+
+Each item is pair of <value, count>
+```python
+most_common(n)[0][0] - returns the value
+most_common(n)[0][1] - returns the count of occurances of the value
+```
 
 ## List ##
 * List are the least object oriented Python data structure.
